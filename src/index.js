@@ -1,6 +1,6 @@
 // import React from 'react';
-import ReactDom from 'react-dom';
-import paintings from './paintings.json';
+// import ReactDom from 'react-dom';
+// import paintings from './paintings.json';
 
 // const elem1 = React.createElement('span', { children: 'Hi' });
 // const elem2 = React.createElement('span', { children: 'world' });
@@ -146,9 +146,17 @@ import paintings from './paintings.json';
 
 // ===================================================================================================
 // З використанням App.js
+import React from 'react';
 import App from './components/App';
+import ReactDOM from 'react-dom/client';
 
-ReactDom.render(<App />, document.querySelector('#root'));
+const root = ReactDOM.createRoot(document.querySelector('#root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+// ReactDom.render(<App />, document.querySelector('#root'));
 
 // ===================================================================================================
 // Розмітка по замовчуванню що створюється при запуску комади npm init react-app з Create React App
