@@ -1,11 +1,11 @@
-import css from './EventBoard.module.css';
 import Event from '../Event/Event';
 import PropTypes from 'prop-types';
+import { Board } from './EventBoard.styled';
 
 function EventBoard({ events }) {
   return (
     <>
-      <div className={css.eventBoard}>
+      <Board>
         {events.map(({ name, location, speaker, type, time }) => (
           <Event
             key={name}
@@ -17,7 +17,7 @@ function EventBoard({ events }) {
             end={time.end}
           />
         ))}
-      </div>
+      </Board>
     </>
   );
 }
