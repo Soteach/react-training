@@ -1,9 +1,11 @@
-import { Container } from './App.styled';
+// import { Container } from './App.styled';
+import Counter from '../Counter/Counter';
 
 function App() {
   return (
     <>
-      <Container></Container>
+      <Counter />
+      {/* <Container></Container> */}
     </>
   );
 }
