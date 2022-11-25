@@ -1,0 +1,28 @@
+.ColorPicker {
+  border: 2px solid teal;
+  border-radius: 4px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 360px;
+  padding: 8px;
+}
+
+.Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.ColorPicker__option {
+  display: inline-block;
+  width: 42px;
+  height: 32px;
+  margin: 4px;
+  cursor: pointer;
+
+  transition: transform 250ms linear;
+}
+
+.ColorPicker__option--active {
+  transform: scale(1.2);
+}
