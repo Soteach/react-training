@@ -9,6 +9,8 @@ import Form from '../Form';
 import TodoEditor from '../TodoEditor/TodoEditor';
 import shortid from 'shortid';
 import Filter from '../Filter';
+import { LoginForm } from '../LoginForm/LoginForm';
+import { ProductReviewForm } from '../ProductReviewForm/ProductRewiewForm';
 
 const colorPickerOptions = [
   { label: 'red', color: '#f44336' },
@@ -126,6 +128,9 @@ class App extends Component {
         <Container>
           <Form onSubmit={this.formSubmitHandler} />
         </Container>
+
+        <LoginForm />
+        <ProductReviewForm />
       </>
     );
   }
