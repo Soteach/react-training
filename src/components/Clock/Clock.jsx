@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Clock.css';
 
 export default class Clock extends Component {
   state = {
@@ -8,12 +9,16 @@ export default class Clock extends Component {
   intervalId = null;
 
   componentDidMount() {
-    console.log('setinterval');
+    // console.log('setinterval');
 
     this.intervalId = setInterval(
       () => this.setState({ time: new Date().toLocaleTimeString() }),
       1000
     );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalId);
   }
   render() {
     return <div className="Clock__face">{this.state.time}</div>;

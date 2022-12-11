@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import Clock from './Clock/Clock';
+// import Clock from './Clock/Clock';
 import Container from './Container/Container';
 import { Modal } from './Modal/Modal';
+import Tabs from './Tabs/Tabs';
+import tabs from '../tabs.json';
 import './App.css';
 
 class App extends Component {
@@ -19,11 +21,13 @@ class App extends Component {
     const { showModal } = this.state;
     return (
       <Container>
+        {/* {showModal && <Clock />} */}
+        <Tabs items={tabs} />
         <button type="button" onClick={this.toggleModal}>
-          Open
+          Open modal
         </button>
         {showModal && (
-          <Modal>
+          <Modal onClose={this.toggleModal}>
             <h1>This is modal content as children</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
@@ -34,6 +38,9 @@ class App extends Component {
               accusantium magnam perspiciatis dolores, alias quisquam ducimus
               neque voluptatum? Dignissimos?
             </p>
+            <button type="button" onClick={this.toggleModal}>
+              Close
+            </button>
           </Modal>
         )}
 
